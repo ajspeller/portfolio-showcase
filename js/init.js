@@ -1,18 +1,12 @@
-(function ($) {
-  $(function () {
+document.addEventListener('DOMContentLoaded', function() {
 
-    $('.sidenav').sidenav();
-    $('.parallax').parallax();
+  var sideNavElems = document.querySelectorAll('.sidenav');
+  M.Sidenav.init(sideNavElems);
 
-    // $('.carousel').carousel();
+  var scrollSpyElems = document.querySelectorAll('.scrollspy');
+  M.ScrollSpy.init(scrollSpyElems);
 
-  }); // end of document ready
-})(jQuery); // end of jQuery name space
+  var parallaxElems = document.querySelectorAll('.parallax');
+  M.Parallax.init(parallaxElems);
 
-document.addEventListener('DOMContentLoaded', function () {
-  var elems = document.querySelectorAll('.carousel');
-  var instances = M.Carousel.init(elems, {
-    fullWidth: true,
-    indicators: true
-  });
 });
